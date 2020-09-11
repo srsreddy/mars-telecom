@@ -1,0 +1,31 @@
+mysqld
+mysqladmin -u root shutdown
+
+
+CREATE TABLE mars_users.employee (
+    empid int NOT NULL,
+    last_name varchar(255) NOT NULL,
+    first_name varchar(255),
+    job varchar(255),
+    PRIMARY KEY (empid)
+);
+
+
+
+CREATE TABLE mars_users.address (
+    empid int NOT NULL,
+    street varchar(20),
+    city varchar(20),
+    state varchar(20),
+    pincode varchar(6),
+);
+
+
+
+CREATE TABLE mars_users.address (
+    addrid int NOT NULL,
+    street varchar(10),
+    city varchar(10),
+    state varchar(10),
+    pincode varchar(10)
+);

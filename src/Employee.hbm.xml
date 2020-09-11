@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+
+	<class name="com.mars.users.model.Employee" table="employee">
+
+		<id name="empId" column="empid" />
+		<property name="lastName" column="last_name"></property>
+		<property name="firstName" column="first_name"></property>
+		<property name="job" column="job" />
+		<set name="address" cascade="all">
+			<key column="reffid" />
+			<one-to-many class="com.mars.users.model.Address" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>
